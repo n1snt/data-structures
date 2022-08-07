@@ -50,6 +50,28 @@ public class LinkedList {
         return list;
     }
 
+    LinkedList insertIndex(LinkedList list, int data, int index) {
+        // Create new node from data
+        Node newNode = new Node(data);
+        // Iterate till the index
+        Node curNode = list.head;
+        int i = 0;
+        while(i < index) {
+            if (curNode.next == null) {
+                System.out.println("Out of index");
+                return list;
+            }
+            curNode = curNode.next;
+            i++;
+        }
+        // Then insert & change pointers
+        Node nextNode = curNode.next;
+        curNode.next = newNode;
+        newNode.next = nextNode;
+
+        return list;
+    }
+
     LinkedList deleteByKey(LinkedList list, int key) {
         // This method deletes node from linked list using key.
 
@@ -150,6 +172,12 @@ public class LinkedList {
         list.deleteByPosition(list, 1);
         list.deleteByPosition(list, 2);
 
+        System.out.println("OLD LIST");
+        list.insert(list, 2);
+        list.print(list);
+        System.out.println("NEW LIST");
+        list.insertIndex(list, 69, 2);
+        list.insertIndex(list, 69, 1);
         list.print(list);
     }
 
