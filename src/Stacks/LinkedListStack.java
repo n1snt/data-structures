@@ -35,7 +35,6 @@ public class LinkedListStack {
         newNode.next = null;
         if (stack.size >= stack.maxSize) {
             System.out.println("Stack overflow!");
-            return;
         } else {
             if (stack.base == null) {
                 stack.base = newNode;
