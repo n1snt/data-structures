@@ -5,9 +5,11 @@ import java.util.List;
 
 public class ArrayListQueue {
 
-    static class Queue {
+    /**
+     * This class  represents Queue
+     */
+    private static class Queue {
         List<Integer> data;
-
         Queue() {
             data = new ArrayList<>();
         }
@@ -41,6 +43,8 @@ public class ArrayListQueue {
     static boolean isEmpty(Queue queue) { return queue.data.isEmpty(); }
 
     public static void main(String[] args) {
+
+        // Init Queue
         Queue queue = new Queue();
 
         // Checks if queue is empty

@@ -1,6 +1,9 @@
 package Stacks;
 
 
+/**
+ * This class represents a single node of a LinkedList
+ */
 class Node {
     int data;
     Node next;

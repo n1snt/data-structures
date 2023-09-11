@@ -63,7 +63,12 @@ public class ArrayStack {
         push(stack, 3);
 
         // Check if stack empty
+        System.out.println("Empty?");
         System.out.println(isEmpty(stack));
+
+        // Check if stack full
+        System.out.println("Full?");
+        System.out.println(isFull(stack));
 
         // Print stack
         print(stack);

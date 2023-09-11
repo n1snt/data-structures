@@ -4,7 +4,7 @@ public class CircularLinkedList {
 
     Node head;
 
-    static class Node {
+    private static class Node {
 
         int Data;
         Node next;
